@@ -4,6 +4,8 @@
  */
 package br.com.fourlinux.laboratorio02;
 
+import br.com.fourlinux.laboratorio02.Funcionario;
+
 /**
  *
  * @author robson
