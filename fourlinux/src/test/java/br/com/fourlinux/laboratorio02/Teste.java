@@ -32,16 +32,22 @@ public class Teste {
         serv.setId(01);
         serv.setFuncionarioResp(null);
         serv.setCliente("Cliente 01");
-        
+        serv.setData(2013, 9, 25);
+        //serv.setHora("15:25:00.0"");
         serv.setEnderecoColeta("Av. Raimundo Peres, 613");
         serv.setEnderecoEntrega("Av. FAB, 1256");
         serv.setDistanciaKm(25.10);
+        
         serv.setAltura(5.14);
         serv.setLargura(3.37);
         serv.setComprimento(7.35);
         serv.setPeso(20.50);
         System.out.println(serv.getCliente());
+        System.out.println(serv.getData().getTime());
         
+        
+        
+
     }
     
    

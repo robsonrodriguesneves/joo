@@ -4,7 +4,7 @@
  */
 package br.com.fourlinux.laboratorio02;
 
-import java.util.Date;
+import java.util.Calendar;
 
 /**
  *
@@ -14,8 +14,8 @@ public class Servico {
    private int id;
    private Funcionario funcionarioResp;
    private String cliente;
-   private Date data;
-   private Date hora;
+   private Calendar data;
+   private Calendar hora;
    private String enderecoColeta;
    private String enderecoEntrega;
    private Double distanciaKm;
@@ -33,10 +33,10 @@ public class Servico {
    public String getCliente(){
        return cliente;
    }
-   public Date getData(){
-       return data;
+   public Calendar getData(){
+      return data;
    }
-   public Date getHora(){
+   public Calendar getHora(){
        return hora;
    }
    public String getEnderecoColeta(){
@@ -70,10 +70,12 @@ public class Servico {
    public void setCliente(String cliente){
        this.cliente = cliente;
    }
-   public void setData(Date data){
-       this.data = data;
+   
+   public void setData(int ano,int mes,int dia){
+       this.data = Calendar.getInstance();
+       this.data.set(ano,mes,dia);
    }
-   public void setHora(Date hora){
+   public void setHora(Calendar hora){
        this.hora = hora;
    }
    public void setEnderecoColeta(String enderecoColeta){

@@ -4,8 +4,6 @@
  */
 package br.com.fourlinux.laboratorio02;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author robson
