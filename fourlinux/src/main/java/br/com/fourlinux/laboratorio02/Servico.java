@@ -5,6 +5,8 @@
 package br.com.fourlinux.laboratorio02;
 
 import java.util.Calendar;
+import java.util.Date;
+
 
 /**
  *
@@ -70,13 +72,13 @@ public class Servico {
    public void setCliente(String cliente){
        this.cliente = cliente;
    }
-   
-   public void setData(int ano,int mes,int dia){
+   public void setData(int ano,int mes,int dia, int hora, int min, int s){
        this.data = Calendar.getInstance();
-       this.data.set(ano,mes,dia);
+       this.data.set(ano,mes,dia,hora,min,s);
    }
-   public void setHora(Calendar hora){
-       this.hora = hora;
+   public void setHora(int ano,int mes,int dia, int hora, int min, int s){
+       this.hora = Calendar.getInstance();
+       this.hora.set(ano,mes,dia,hora,min,s);
    }
    public void setEnderecoColeta(String enderecoColeta){
        this.enderecoColeta = enderecoColeta;

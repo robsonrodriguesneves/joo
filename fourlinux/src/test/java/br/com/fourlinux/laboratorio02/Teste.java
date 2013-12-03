@@ -4,6 +4,8 @@
  */
 package br.com.fourlinux.laboratorio02;
 
+import java.text.SimpleDateFormat;
+
 /**
  *
  * @author robson
@@ -32,8 +34,11 @@ public class Teste {
         serv.setId(01);
         serv.setFuncionarioResp(null);
         serv.setCliente("Cliente 01");
-        serv.setData(2013, 9, 25);
-        //serv.setHora("15:25:00.0"");
+        SimpleDateFormat data = new SimpleDateFormat("yyyy-MM-dd");
+        serv.setData(2013, 9, 25, 0, 0, 0);
+        serv.setHora(0,0,0,18,37,5);
+        //serv.setData("2013-9-25");
+        //serv.setHora(10);
         serv.setEnderecoColeta("Av. Raimundo Peres, 613");
         serv.setEnderecoEntrega("Av. FAB, 1256");
         serv.setDistanciaKm(25.10);
@@ -44,6 +49,7 @@ public class Teste {
         serv.setPeso(20.50);
         System.out.println(serv.getCliente());
         System.out.println(serv.getData().getTime());
+        System.out.println(serv.getHora().getTime());
         
         
         
