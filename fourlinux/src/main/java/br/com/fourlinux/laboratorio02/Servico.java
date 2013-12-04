@@ -16,8 +16,8 @@ public class Servico {
    private int id;
    private Funcionario funcionarioResp;
    private String cliente;
-   private Calendar data;
-   private Calendar hora;
+   private Date data;
+   private Date hora;
    private String enderecoColeta;
    private String enderecoEntrega;
    private Double distanciaKm;
@@ -35,10 +35,10 @@ public class Servico {
    public String getCliente(){
        return cliente;
    }
-   public Calendar getData(){
+   public Date getData(){
       return data;
    }
-   public Calendar getHora(){
+   public Date getHora(){
        return hora;
    }
    public String getEnderecoColeta(){
@@ -72,13 +72,19 @@ public class Servico {
    public void setCliente(String cliente){
        this.cliente = cliente;
    }
-   public void setData(int ano,int mes,int dia, int hora, int min, int s){
-       this.data = Calendar.getInstance();
-       this.data.set(ano,mes,dia,hora,min,s);
+   public void setData(int dia,int mes,int ano){
+       Calendar d = Calendar.getInstance();
+       d.set(Calendar.DAY_OF_MONTH,dia);
+       d.set(Calendar.MONTH,mes);
+       d.set(Calendar.YEAR,ano);
+       this.data = d.getTime();
    }
-   public void setHora(int ano,int mes,int dia, int hora, int min, int s){
-       this.hora = Calendar.getInstance();
-       this.hora.set(ano,mes,dia,hora,min,s);
+   public void setHora(int hora, int min, int seg){
+       Calendar h = Calendar.getInstance();
+       h.set(Calendar.HOUR,hora);
+       h.set(Calendar.MINUTE,min);
+       h.set(Calendar.SECOND,seg);
+       this.hora = h.getTime();
    }
    public void setEnderecoColeta(String enderecoColeta){
        this.enderecoColeta = enderecoColeta;

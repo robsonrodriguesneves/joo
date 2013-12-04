@@ -4,7 +4,8 @@
  */
 package br.com.fourlinux.laboratorio02;
 
-import java.text.SimpleDateFormat;
+import java.text.DateFormat;
+import java.util.Calendar;
 
 /**
  *
@@ -27,35 +28,31 @@ public class Teste {
         func.setUf("AP");
         func.setUsuario("robson");
         func.setSenha("123456");
-        System.out.println(func.getNome());
+        
         
         
         Servico serv = new Servico();
         serv.setId(01);
         serv.setFuncionarioResp(null);
         serv.setCliente("Cliente 01");
-        SimpleDateFormat data = new SimpleDateFormat("yyyy-MM-dd");
-        serv.setData(2013, 9, 25, 0, 0, 0);
-        serv.setHora(0,0,0,18,37,5);
-        //serv.setData("2013-9-25");
-        //serv.setHora(10);
+        serv.setData(22,9,2013);
+        serv.setHora(19,37,5);
         serv.setEnderecoColeta("Av. Raimundo Peres, 613");
         serv.setEnderecoEntrega("Av. FAB, 1256");
         serv.setDistanciaKm(25.10);
-        
         serv.setAltura(5.14);
         serv.setLargura(3.37);
         serv.setComprimento(7.35);
         serv.setPeso(20.50);
-        System.out.println(serv.getCliente());
-        System.out.println(serv.getData().getTime());
-        System.out.println(serv.getHora().getTime());
+        System.out.println("Funcionario: "+func.getNome());
+        System.out.println("Cliente: "+serv.getCliente());
         
+        DateFormat formataData = DateFormat.getDateInstance();
+        DateFormat formataHora = DateFormat.getTimeInstance();
         
-        
-
+        //System.out.println("Data: "+serv.getData());
+        System.out.println("Data: "+formataData.format(serv.getData()));
+        //System.out.println("Hora: "+serv.getHora());
+        System.out.println("Hora: "+formataHora.format(serv.getHora()));
     }
-    
-   
-    
 }
