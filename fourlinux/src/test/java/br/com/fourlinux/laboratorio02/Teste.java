@@ -51,13 +51,14 @@ public class Teste {
         System.out.println("Cliente: "+serv.getCliente());
          
         SimpleDateFormat d = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat h = new SimpleDateFormat("k:mm:ss");
         
         //System.out.println("Data: "+serv.getData());
         System.out.println("Data: "+d.format(serv.getData()));
         //System.out.println("Data: "+formataData.format(serv.getData()));
-        //System.out.println("Hora: "+serv.getHora());
         System.out.println("Hora: "+serv.getHora());
-        System.out.println("Hora: "+formataHora.format(serv.getHora()));
+        System.out.println("Hora: "+h.format(serv.getHora()));
+        //System.out.println("Hora: "+formataHora.format(serv.getHora()));
         
     }
 }

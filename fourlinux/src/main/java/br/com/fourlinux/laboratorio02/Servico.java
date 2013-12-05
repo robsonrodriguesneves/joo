@@ -72,20 +72,9 @@ public class Servico {
        this.cliente = cliente;
    }
    public void setData(Date data){
-       /*
-       Calendar d = Calendar.getInstance();
-       d.set(Calendar.DAY_OF_MONTH,dia);
-       d.set(Calendar.MONTH,mes);
-       d.set(Calendar.YEAR,ano);
-       */
        this.data = data;
    }
    public void setHora(Date hora){
-       /*Calendar h = Calendar.getInstance();
-       h.set(Calendar.HOUR,hora);
-       h.set(Calendar.MINUTE,min);
-       h.set(Calendar.SECOND,seg);
-               */
        this.hora = hora;
    }
    public void setEnderecoColeta(String enderecoColeta){
